@@ -56,5 +56,13 @@
     {
       "path": "dist/index.js"
     }
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jxnblk/nano-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jxnblk/nano-component/issues"
+  },
+  "homepage": "https://github.com/jxnblk/nano-component#readme"
 }
