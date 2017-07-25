@@ -1,0 +1,36 @@
+{
+  "name": "sc0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "babel src -d dist",
+    "start": "webpack-dev-server",
+    "size": "npm run prepublish && bundlesize",
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "bundlesize": "^0.12.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-system": "^1.0.0-9",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "stylis": "^3.2.8"
+  },
+  "bundlesize": [
+    {
+      "path": "dist/index.js"
+    }
+  ]
+}
