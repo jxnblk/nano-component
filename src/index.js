@@ -9,9 +9,9 @@ const mx = (rule, media) => media ? `${media}{${rule}}` : rule
 const rx = (cn, prop, val, media) => mx(`.${cn}{${hyphenate(prop)}:${px(val)}}`, media)
 
 if (typeof window !== 'undefined') {
-  const tag = document.createElement('style')
-  document.head.appendChild(tag)
-  const sheet = tag.sheet
+  const sheet = document.head.appendChild(
+    document.createElement('style')
+  ).sheet
   insert = rule => {
     const i = sheet.cssRules.length
     sheet.insertRule(rule, i)
@@ -43,8 +43,9 @@ const parse = (obj, child = '', media) => {
 }
 
 const comp = Comp => (...args) => props => {
-  const styles = args.map(arg => typeof arg === 'function' ? arg(props) : arg)
-  const className = styles.map(s => parse(s)).join(' ')
+  const className = args
+    .map(arg => typeof arg === 'function' ? arg(props) : arg)
+    .map(s => parse(s)).join(' ')
   return h(Comp, Object.assign({}, props, { className }))
 }
 
