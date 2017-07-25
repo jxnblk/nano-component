@@ -6,5 +6,8 @@
       ]
     }],
     "react"
+  ],
+  "plugins": [
+    "babel-plugin-add-module-exports"
   ]
 }
