@@ -254,7 +254,7 @@ library | gzip size
 nano-component | 0.93 kB
 emotion | 2.42 kB
 glamorous | 7.95 kB
-styled-component | 13.8 kB
+styled-components | 13.8 kB
 
 
 
