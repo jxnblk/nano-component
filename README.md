@@ -3,6 +3,8 @@
 
 Fast & simple React component styles in under 1kb
 
+http://jxnblk.com/nano-component/
+
 [![Build Status](https://travis-ci.org/jxnblk/nano-component.svg?branch=master)](https://travis-ci.org/jxnblk/nano-component)
 [![0.9kb gzip](https://img.shields.io/badge/gzip-0.9kb-brightgreen.svg)](https://github.com/siddharthkp/bundlesize)
 
