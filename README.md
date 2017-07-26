@@ -88,7 +88,7 @@ const Heading = nano('h2')(props => ({
 
 ## Multiple Styles
 
-Mutliple arguments can be passed to nano components to help break up logic.
+Multiple arguments can be passed to nano components to help break up logic.
 
 ```js
 const color = props => ({ color: props: color })
