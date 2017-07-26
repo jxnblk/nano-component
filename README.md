@@ -41,8 +41,20 @@ const Button = nano('button')({
 
 Inspired by libraries like [styled-components][6], [glamorous][7], and [emotion][8],
 nano-component is a bare-bones css-in-js library for easily creating styled React UI components.
-nano-component attempts to strip the functionality down to an point where there's nothing left to remove.
 
+### Motivation
+
+> Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
+> - Antoine de Saint Exupéry
+
+Encapsulating styles in UI components is a great way to build consistent, scalable UI,
+and using JavaScript to manage these styles makes a lot of sense for large applications with dozens of contributors.
+While native JavaScript provides some great low-level APIs for managing styles,
+libraries that interact with these APIs tend to add a lot of features that
+add complexity and a performance penalty for what should be a fairly straightforward task.
+
+Nano components comes from a desire to show that dynamically injecting CSS with JavaScript is not that complicated.
+In 52 lines of code, this library provides dynamically rendered, encapsulated styles that can be computed from component props.
 
 ## Features
 
@@ -50,6 +62,7 @@ nano-component attempts to strip the functionality down to an point where there'
 - 52 LOC
 - Fast
 - Simple API
+- Extensible
 - Use JavaScript objects for styling
 - Pseudoclasses
 - Media queries
