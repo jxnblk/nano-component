@@ -57,6 +57,7 @@ add complexity and a performance penalty for what should be a fairly straightfor
 Nano components comes from a desire to show that dynamically injecting CSS with JavaScript is not that complicated.
 In 52 lines of code, this library provides dynamically rendered, encapsulated styles that can be computed from component props.
 
+
 ## Features
 
 - Under 1kb gzipped
@@ -69,6 +70,7 @@ In 52 lines of code, this library provides dynamically rendered, encapsulated st
 - Media queries
 - Child selectors
 - Atomic code deduplication
+- No build steps or configuration required
 
 
 ## Dynamic Styles
@@ -82,6 +84,7 @@ const Heading = nano('h2')(props => ({
 
 // <Heading color='tomato'>Hello</Heading>
 ```
+
 
 ## Multiple Styles
 
@@ -97,7 +100,26 @@ const Heading = nano('h2')(
 )
 ```
 
-### styled-system
+
+## Extending Components
+
+Other React components can be passed to nano-component to add styles,
+as long as that component that accepts `className` as a prop –
+for example, [react-router's][9] Link component.
+
+```js
+import { Link } from 'react-router'
+import nano from 'nano-component'
+
+const NavLink = nano(Link)({
+  textDecoration: 'none',
+  fontWeight: 'bold',
+  color: 'inherit'
+})
+```
+
+
+## styled-system
 
 The [styled-system][0] library can be used with nano-component
 
@@ -112,10 +134,28 @@ const Box = nano('div')(space, width)
 ```
 
 
+## Setting Props
+
+To add props to a component, use the same [`.defaultProps`](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values)
+object you would use on any other React component.
+
+```js
+const Heading = nano('h2')(props => ({
+  fontSize: 32,
+  color: props.color
+}))
+
+Heading.defaultProps = {
+  color: 'tomato'
+}
+```
+
+
 ## Removing Props
 
 To remove unwanted style props from the root HTML element, use a higher order component like
 [tag-hoc][2] or [recompose's][3] [mapProps][4] utility.
+This avoids any use of whitelisting or assumptions about which props should be passed to the underlying component.
 
 ```js
 import nano from 'nano-component'
@@ -141,6 +181,20 @@ const H2 = mapProps(props => Object.assign({}, props, {
 const Heading = nano(H2)(props => ({
   color: props.color
 }))
+```
+
+
+## Sharing Styles
+
+Importing shared, thematic constants can help manage UI styles in a more explicit way than anything possible with CSS.
+
+```js
+import nano from 'nano-component'
+import { colors } from './theme'
+
+const Heading = nano('h2')({
+  color: colors.slate
+})
 ```
 
 
@@ -173,6 +227,7 @@ const App = props => (
 )
 ```
 
+
 ## Benchmarks
 
 nano-component does not have as many features as other similar libraries,
@@ -194,11 +249,49 @@ See the [benchmarks](benchmarks/) directory for more.
     glamorous x 2,300 ops/sec ±4.35% (72 runs sampled)
     styled-components x 1,557 ops/sec ±3.91% (75 runs sampled)
 
+library | gzip size
+---|---
+nano-component | 0.93 kB
+emotion | 2.42 kB
+glamorous | 7.95 kB
+styled-component | 13.8 kB
 
-## Static/Server Rendering
+
+
+## Limitations
+
+### Static/Server Rendering
 
 While nano components will render in Node.js environments, the styles are only created in client-side environments.
 This means that nano components can be used for universal rendering, but will not receive styles until rendered with client-side JavaScript.
+
+### Keyframes & Animations
+
+While nano-component does not provide a mechanism for defining keyframes, predefined animations can be used in nano components.
+
+```css
+/* CSS file */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+```
+
+```js
+import Ring from './Ring'
+
+const Loading = nano(Ring)({
+  animationName: 'spin',
+  animationDuration: '1s',
+  animationTimingFunction: 'linear',
+  animationIterationCount: 'infinite'
+})
+```
+
 
 
 ## Related
@@ -218,5 +311,6 @@ This means that nano components can be used for universal rendering, but will no
 [6]: https://github.com/styled-components/styled-components
 [7]: https://github.com/paypal/glamorous
 [8]: https://github.com/tkh44/emotion
+[9]: https://github.com/ReactTraining/react-router
 
 MIT License
