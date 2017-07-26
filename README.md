@@ -45,7 +45,7 @@ nano-component is a bare-bones css-in-js library for easily creating styled Reac
 ### Motivation
 
 > Perfection is attained not when there is nothing more to add, but when there is nothing more to remove.
-> - Antoine de Saint Exupéry
+*– Antoine de Saint Exupéry*
 
 Encapsulating styles in UI components is a great way to build consistent, scalable UI,
 and using JavaScript to manage these styles makes a lot of sense for large applications with dozens of contributors.
