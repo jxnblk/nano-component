@@ -264,6 +264,7 @@ styled-components | 13.8 kB
 
 While nano components will render in Node.js environments, the styles are only created in client-side environments.
 This means that nano components can be used for universal rendering, but will not receive styles until rendered with client-side JavaScript.
+Generally this is an acceptable tradeoff for SEO purposes.
 
 ### Keyframes & Animations
 
