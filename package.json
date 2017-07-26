@@ -6,6 +6,7 @@
   "scripts": {
     "prepublish": "babel src -d dist",
     "start": "webpack-dev-server",
+    "docs": "NODE_ENV=production webpack -p",
     "size": "npm run prepublish && bundlesize",
     "cover": "npm t && nyc report --reporter=html --reporter=lcov",
     "test": "nyc ava"
