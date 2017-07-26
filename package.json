@@ -1,7 +1,7 @@
 {
   "name": "nano-component",
-  "version": "1.0.0-1",
-  "description": "Dynamic React component styling in under 1kb",
+  "version": "1.0.0-2",
+  "description": "Fast & simple React component styles in under 1kb",
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "babel src -d dist",
@@ -34,6 +34,8 @@
     "react-live": "^1.7.0",
     "react-test-renderer": "^15.6.1",
     "styled-system": "^1.0.0-9",
+    "tag-hoc": "^1.0.0-0",
+    "theming": "^1.1.0",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.6.1"
   },

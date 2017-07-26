@@ -9,7 +9,7 @@ const config = {
   },
   resolve: {
     alias: {
-      'comp': path.join(__dirname, 'src')
+      'nano-component': path.join(__dirname, 'src')
     }
   },
   module: {

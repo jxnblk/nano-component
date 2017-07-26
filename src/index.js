@@ -42,11 +42,13 @@ const parse = (obj, child = '', media) => {
   return classnames.join(' ')
 }
 
-const comp = Comp => (...args) => props => {
+const nano = Comp => (...args) => props => {
   const className = args
     .map(arg => typeof arg === 'function' ? arg(props) : arg)
     .map(s => parse(s)).join(' ')
-  return h(Comp, Object.assign({}, props, { className }))
+  return h(Comp, Object.assign({}, props, {
+    className: [ props.className, className ].join(' ')
+  }))
 }
 
-export default comp
+export default nano

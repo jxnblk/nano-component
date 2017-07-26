@@ -1,3 +1,36 @@
 <!DOCTYPE html>
-<style>*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.5;margin:0}</style>
-<div id=app></div><script src=bundle.js></script>
+<meta charset='utf-8'>
+<title>nano-component</title>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<meta name='description' content='Fast & simple React component styles in under 1kb'>
+
+<meta name='twitter:card' content='summary_large_image'>
+<meta name='twitter:site' content='@jxnblk'>
+<meta name='twitter:title' content='nano-component'>
+<meta name='twitter:description' content='Fast & simple React component styles in under 1kb'>
+<!--
+<meta name='twitter:image' content='http://jxnblk.com/rebass/card.png'>
+-->
+
+<style>
+*{box-sizing:border-box}
+body{font-family:'Roboto Mono', 'SF Mono', Menlo, monospace;line-height:1.5;margin:0}
+</style>
+<div id=app></div>
+<script src=bundle.js></script>
+<script>
+window.twttr = (function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0],
+t = window.twttr || {};
+if (d.getElementById(id)) return t;
+js = d.createElement(s);
+js.id = id;
+js.src = "https://platform.twitter.com/widgets.js";
+fjs.parentNode.insertBefore(js, fjs);
+t._e = [];
+t.ready = function(f) {
+t._e.push(f);
+};
+return t;
+}(document, "script", "twitter-wjs"));
+</script>

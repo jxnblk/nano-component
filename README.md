@@ -1,7 +1,7 @@
 
 # nano-component
 
-Dynamic React component styling in under 1kb
+Fast & simple React component styles in under 1kb
 
 [![Build Status](https://travis-ci.org/jxnblk/nano-component.svg?branch=master)](https://travis-ci.org/jxnblk/nano-component)
 [![0.9kb gzip](https://img.shields.io/badge/gzip-0.9kb-brightgreen.svg)](https://github.com/siddharthkp/bundlesize)
@@ -46,6 +46,7 @@ nano-component attempts to strip the functionality down to an point where there'
 
 - Under 1kb gzipped
 - 52 LOC
+- Fast
 - Simple API
 - Use JavaScript objects for styling
 - Pseudoclasses
