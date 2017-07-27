@@ -5,7 +5,21 @@ require('browser-env')()
 const nano = require('./lib/nano')
 const styledComponents = require('./lib/styled-components')
 const glamorous = require('./lib/glamorous')
+/*
+// no idea how to get this to actually work
+require('babel-register')({
+  plugins: [
+    [
+      require('emotion/babel'),
+      {
+        inline: true
+      }
+    ]
+  ]
+})
 const emotion = require('./lib/emotion')
+emotion()
+*/
 
 suite
   .add('nano-component', () => {
@@ -17,9 +31,9 @@ suite
   .add('glamorous', () => {
     glamorous()
   })
-  .add('emotion', () => {
-    glamorous()
-  })
+  // .add('emotion', () => {
+  //     emotion()
+  //   })
   .on('cycle', e => {
     console.log(String(e.target))
   })
