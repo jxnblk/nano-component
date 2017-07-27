@@ -18,6 +18,7 @@ if (typeof window !== 'undefined') {
 }
 
 const parse = (obj, child = '', media) => {
+  if (!obj) return ''
   return Object.keys(obj).map(key => {
     const val = obj[key]
     if (val === null) return ''
