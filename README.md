@@ -5,8 +5,8 @@ Fast & simple React component styles in under 1kb
 
 http://jxnblk.com/nano-component/
 
-[![Build Status](https://travis-ci.org/jxnblk/nano-component.svg?branch=master&style=flat-squared)](https://travis-ci.org/jxnblk/nano-component)
-[![0.8kb gzip](https://img.shields.io/badge/gzip-0.8kb-brightgreen.svg?style=flat-squared)](https://github.com/siddharthkp/bundlesize)
+[![Build Status](https://travis-ci.org/jxnblk/nano-component.svg?branch=master&style=flat-square)](https://travis-ci.org/jxnblk/nano-component)
+[![0.8kb gzip](https://img.shields.io/badge/gzip-0.8kb-brightgreen.svg?style=flat-square)](https://github.com/siddharthkp/bundlesize)
 
 
 ```sh
