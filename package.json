@@ -9,7 +9,7 @@
     "docs": "NODE_ENV=production webpack -p",
     "size": "npm run prepublish && bundlesize",
     "_cover": "npm t && nyc report --reporter=html --reporter=lcov",
-    "cover": "npm t && nyc report --reporter=lcov > coverage.lcov && codecov",
+    "cover": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "test": "nyc ava"
   },
   "keywords": [
