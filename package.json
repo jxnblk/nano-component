@@ -8,7 +8,8 @@
     "start": "webpack-dev-server",
     "docs": "NODE_ENV=production webpack -p",
     "size": "npm run prepublish && bundlesize",
-    "cover": "npm t && nyc report --reporter=html --reporter=lcov",
+    "_cover": "npm t && nyc report --reporter=html --reporter=lcov",
+    "cover": "npm t && nyc report --reporter=lcov > coverage.lcov && codecov",
     "test": "nyc ava"
   },
   "keywords": [
@@ -27,6 +28,7 @@
     "babel-preset-react": "^6.24.1",
     "browser-env": "^3.1.0",
     "bundlesize": "^0.12.2",
+    "codecov": "^2.2.0",
     "nyc": "^11.0.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
