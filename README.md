@@ -104,8 +104,10 @@ const Heading = nano('h2')(
 ## Number Values
 
 Any number value will be converted to a pixel value, regardless of which CSS property it's applied to.
-Unlike other libraries that use a blacklist of CSS properties, to avoid adding pixels to unitless numbers,
-provide those values as strings.
+Unlike other libraries that use a blacklist of CSS properties,
+nano component does not handle number values differently based on property.
+This is to both keep the library size to a minimum and to ensure a more deliberate API.
+To avoid adding pixels to unitless numbers, provide those values as strings.
 
 ```js
 const Heading = nano('h2')({
