@@ -1,11 +1,11 @@
 
 # nano-component
 
-Fast & simple React component styles in under 1kb
-
 [![Build Status][build-badge]][build]
 [![Coverage][coverage-badge]][coverage]
 [![0.8kb gzip][size-badge]][size]
+
+Fast & simple React component styles in under 1kb
 
 http://jxnblk.com/nano-component/
 
