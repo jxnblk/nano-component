@@ -7,6 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-register": "^6.24.1",
+    "babel-standalone": "^6.25.0",
     "benchmark": "^2.1.4",
     "browser-env": "^3.1.0",
     "emotion": "^6.0.3",

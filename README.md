@@ -3,11 +3,18 @@
 
 Fast & simple React component styles in under 1kb
 
+[![Build Status][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![0.8kb gzip][size-badge]][size]
+
 http://jxnblk.com/nano-component/
 
-[![Build Status](https://img.shields.io/travis/jxnblk/nano-component/master.svg?style=flat-square)](https://travis-ci.org/jxnblk/nano-component)
-[![0.8kb gzip](https://img.shields.io/badge/gzip-0.8kb-brightgreen.svg?style=flat-square)](https://github.com/siddharthkp/bundlesize)
-
+[build-badge]: https://img.shields.io/travis/jxnblk/nano-component/master.svg?style=flat-square
+[build]: https://travis-ci.org/jxnblk/nano-component
+[coverage-badge]: https://img.shields.io/codecov/c/github/jxnblk/nano-component.svg?style=flat-square
+[coverage]: https://codecov.io/github/jxnblk/nano-component
+[size-badge]: https://img.shields.io/badge/gzip-0.8kb-brightgreen.svg?style=flat-square
+[size]: https://github.com/siddharthkp/bundlesize
 
 ```sh
 npm i nano-component
@@ -250,17 +257,21 @@ nano-component does not have as many features as other similar libraries,
 but when run against similar benchmarks, nano-component tends to perform slightly better.
 See the [benchmarks](benchmarks/) directory for more.
 
-    nano-component x 3,855 ops/sec ±4.45% (72 runs sampled)
-    glamorous x 1,827 ops/sec ±5.31% (73 runs sampled)
-    styled-components x 1,556 ops/sec ±4.34% (67 runs sampled)
+  nano-component x 3,742 ops/sec ±4.87% (70 runs sampled)
+  emotion x 3,044 ops/sec ±9.99% (75 runs sampled)
+  glamorous x 2,151 ops/sec ±10.91% (74 runs sampled)
+  styled-components x 1,748 ops/sec ±3.84% (71 runs sampled)
 
-    nano-component x 3,310 ops/sec ±5.33% (74 runs sampled)
-    glamorous x 1,891 ops/sec ±4.98% (72 runs sampled)
-    styled-components x 1,551 ops/sec ±4.27% (72 runs sampled)
+  nano-component x 3,357 ops/sec ±5.91% (70 runs sampled)
+  emotion x 2,714 ops/sec ±3.04% (73 runs sampled)
+  glamorous x 2,013 ops/sec ±3.87% (69 runs sampled)
+  styled-components x 1,611 ops/sec ±5.12% (67 runs sampled)
 
-    nano-component x 3,228 ops/sec ±6.15% (70 runs sampled)
-    glamorous x 2,300 ops/sec ±4.35% (72 runs sampled)
-    styled-components x 1,557 ops/sec ±3.91% (75 runs sampled)
+  nano-component x 3,553 ops/sec ±4.16% (73 runs sampled)
+  emotion x 2,764 ops/sec ±4.63% (67 runs sampled)
+  glamorous x 1,922 ops/sec ±6.36% (68 runs sampled)
+  styled-components x 1,657 ops/sec ±5.09% (72 runs sampled)
+
 
 library | gzip size
 ---|---

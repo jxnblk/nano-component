@@ -1,11 +1,11 @@
 const h = require('react').createElement
 const { render } = require('react-dom')
-const { css }  = require('emotion') //.default
+const styled = require('emotion/react').default
 
 const app = document.createElement('div')
 
 module.exports = () => {
-  const Button = css('button')`
+  const Button = styled('button')`
     font-family: inherit;
     font-size: inherit;
     display: inline-block;

@@ -1,40 +1,25 @@
 const Benchmark = require('benchmark')
 const suite = new Benchmark.Suite
 
+// benchmark hates browser-env
 require('browser-env')()
 const nano = require('./lib/nano')
 const styledComponents = require('./lib/styled-components')
 const glamorous = require('./lib/glamorous')
-/*
-// no idea how to get this to actually work
+
+// must be imported after others to prevent globbering other libraries
 require('babel-register')({
   plugins: [
-    [
-      require('emotion/babel'),
-      {
-        inline: true
-      }
-    ]
+    [ require('emotion/babel'), { inline: true } ]
   ]
 })
 const emotion = require('./lib/emotion')
-emotion()
-*/
 
 suite
-  .add('nano-component', () => {
-    nano()
-  })
-  .add('styled-components', () => {
-    styledComponents()
-  })
-  .add('glamorous', () => {
-    glamorous()
-  })
-
-  // .add('emotion', () => {
-  //     emotion()
-  //   })
+  .add('nano-component', nano)
+  .add('emotion', emotion)
+  .add('glamorous', glamorous)
+  .add('styled-components', styledComponents)
   .on('cycle', e => {
     console.log(String(e.target))
   })
