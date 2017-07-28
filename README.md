@@ -101,6 +101,20 @@ const Heading = nano('h2')(
 ```
 
 
+## Number Values
+
+Any number value will be converted to a pixel value, regardless of which CSS property it's applied to.
+Unlike other libraries that use a blacklist of CSS properties, to avoid adding pixels to unitless numbers,
+provide those values as strings.
+
+```js
+const Heading = nano('h2')({
+  marginTop: 32,    // converted to pixels
+  marginBottom: 8,
+  lineHeight: '1.5' // a unitless value
+```
+
+
 ## Extending Components
 
 Other React components can be passed to nano-component to add styles,
