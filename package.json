@@ -1,6 +1,6 @@
 {
   "name": "nano-component",
-  "version": "1.0.0-3",
+  "version": "1.0.0-4",
   "description": "Fast & simple React component styles in under 1kb",
   "main": "dist/index.js",
   "scripts": {
