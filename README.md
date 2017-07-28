@@ -13,7 +13,7 @@ http://jxnblk.com/nano-component/
 [build]: https://travis-ci.org/jxnblk/nano-component
 [coverage-badge]: https://img.shields.io/codecov/c/github/jxnblk/nano-component.svg?style=flat-square
 [coverage]: https://codecov.io/github/jxnblk/nano-component
-[size-badge]: https://img.shields.io/badge/gzip-0.8kb-brightgreen.svg?style=flat-square
+[size-badge]: https://img.shields.io/badge/gzip-0.8%20kB-brightgreen.svg?style=flat-square
 [size]: https://github.com/siddharthkp/bundlesize
 
 ```sh

@@ -15,12 +15,12 @@ const NavBar = props => (
       <Box ml='auto' />
       <Badge
         href='https://travis-ci.org/jxnblk/nano-component'
-        image='https://img.shields.io/travis/jxnblk/nano-component/master.svg'
+        image='https://img.shields.io/travis/jxnblk/nano-component/master.svg?style=flat-square'
       />
       <Box ml={1} />
       <Badge
         href='https://github.com/siddharthkp/bundlesize'
-        image='https://img.shields.io/badge/gzip-0.9kb-brightgreen.svg'
+        image='https://img.shields.io/badge/gzip-0.8%20kB-brightgreen.svg?style=flat-square'
       />
       <Box ml={1} />
       <Tweet />
