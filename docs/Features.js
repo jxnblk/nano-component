@@ -15,8 +15,8 @@ const Features = () => (
 )
 
 const features = [
-  '- Under 1kb gzipped',
-  '- 52 lines of code',
+  '- 0.8 kB gzipped',
+  '- 47 lines of code',
   '- Fast',
   '- Simple API',
   '- Use JavaScript objects for styling',
