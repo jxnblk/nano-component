@@ -275,7 +275,7 @@ See the [benchmarks](benchmarks/) directory for more.
 
 library | gzip size
 ---|---
-nano-component | 0.93 kB
+nano-component | 0.79 kB
 emotion | 2.42 kB
 glamorous | 7.95 kB
 styled-components | 13.8 kB
