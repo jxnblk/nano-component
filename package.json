@@ -23,8 +23,6 @@
     "ava": "^0.21.0",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.1",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "browser-env": "^3.1.0",
@@ -59,7 +57,9 @@
     ]
   },
   "bundlesize": [
-    { "path": "dist/index.js" }
+    {
+      "path": "dist/index.js"
+    }
   ],
   "repository": {
     "type": "git",

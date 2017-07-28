@@ -1,7 +1,7 @@
-import { createElement as h } from 'react'
+const h = require('react').createElement
 
 let _id = 0
-let insert = n => n
+let insert = () => {}
 const cache = {}
 const hyphenate = s => s.replace(/[A-Z]|^ms/g, '-$&').toLowerCase()
 const px = n => typeof n === 'number' ? n + 'px' : n
@@ -17,9 +17,8 @@ if (typeof window !== 'undefined') {
   }
 }
 
-const parse = (obj, child = '', media) => {
-  if (!obj) return ''
-  return Object.keys(obj).map(key => {
+const parse = (obj, child, media) =>
+  Object.keys(obj).map(key => {
     const val = obj[key]
     if (val === null) return ''
     if (typeof val === 'object') {
@@ -30,12 +29,10 @@ const parse = (obj, child = '', media) => {
     const cacheKey = key + val + media
     if (cache[cacheKey]) return cache[cacheKey]
     const className = 'x' + (_id++).toString(36)
-    const rule = mx(rx(className + child, key, val) , media)
-    insert(rule)
+    insert(mx(rx(className + child, key, val) , media))
     cache[cacheKey] = className
     return className
   }).join(' ')
-}
 
 const nano = C => (...args) => props =>
   h(C, Object.assign({}, props, {
@@ -43,8 +40,8 @@ const nano = C => (...args) => props =>
       props.className,
       args
         .map(a => typeof a === 'function' ? a(props) : a)
-        .map(s => parse(s)).join(' ')
+        .map(s => parse(s || {}, '')).join(' ')
     ].join(' ')
   }))
 
-export default nano
+module.exports = nano
