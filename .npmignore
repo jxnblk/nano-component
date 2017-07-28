@@ -5,3 +5,6 @@ browser-env.js
 docs
 webpack.config.js
 benchmarks
+.nyc_output
+coverage
+.babelrc
