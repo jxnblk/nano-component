@@ -6,6 +6,7 @@ require('browser-env')()
 const nano = require('./lib/nano')
 const styledComponents = require('./lib/styled-components')
 const glamorous = require('./lib/glamorous')
+const inlineStyles = require('./lib/inline-styles')
 
 // must be imported after others to prevent globbering other libraries
 require('babel-register')({
@@ -16,6 +17,7 @@ require('babel-register')({
 const emotion = require('./lib/emotion')
 
 suite
+  .add('inline-styles', inlineStyles)
   .add('nano-component', nano)
   .add('emotion', emotion)
   .add('glamorous', glamorous)
