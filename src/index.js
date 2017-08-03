@@ -1,21 +1,15 @@
 const h = require('react').createElement
 
 let _id = 0
-let insert = () => {}
-const cache = {}
+let cache = {}
+const rules = []
+let insert = rule => {
+  rules.push(rule)
+}
 const hyphenate = s => s.replace(/[A-Z]|^ms/g, '-$&').toLowerCase()
 const px = n => typeof n === 'number' ? n + 'px' : n
 const mx = (rule, media) => media ? `${media}{${rule}}` : rule
 const rx = (cn, prop, val) => `.${cn}{${hyphenate(prop)}:${px(val)}}`
-
-if (typeof window !== 'undefined') {
-  const sheet = document.head.appendChild(
-    document.createElement('style')
-  ).sheet
-  insert = rule => {
-    sheet.insertRule(rule, sheet.cssRules.length)
-  }
-}
 
 const parse = (obj, child, media) =>
   Object.keys(obj).map(key => {
@@ -45,3 +39,11 @@ const nano = C => (...args) => props =>
   }))
 
 module.exports = nano
+
+module.exports.css = () => rules.join('')
+module.exports.reset = () => {
+  cache = {}
+  while (rules.length) {
+    rules.pop()
+  }
+}
